@@ -1,4 +1,4 @@
-PKG_NAME=`grep -o ' packageName \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
+PKG_NAME=`grep -o ' packageAlias \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
 VERSION=`grep -o ' packageVersion \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
 
 # Create the dist directory if needed
@@ -10,11 +10,18 @@ fi
 
 # Copy files
 cp src/*.css dist/package/
+cp src/*.js dist/package/
 cp src/*.html dist/package/
-cp src/*.manifest dist/package/
+cp src/lang/*.xml dist/package/
+
+# Copy the Value Converters to the dist/ folder
+cp src/*.cs dist/
 
 # Transform the package.xml file
 xsltproc --novalid --xinclude --output dist/package/package.xml lib/packager.xslt src/package.xml
+
+# Transform the manifest.xml file
+xsltproc --novalid --xinclude --output dist/package/package.manifest lib/manifester.xslt src/manifest.xml
 
 
 # Build the ZIP file
