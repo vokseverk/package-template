@@ -1,22 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE umbPackage [
 	<!ENTITY % packageInfo SYSTEM "package.ent">
 	%packageInfo;
 ]>
 <umbPackage>
-	<!--
-	Files will be put in folderPrefix + packageName (without spaces or slashes), e.g.:
-		
-		/App_Plugins/MyPropertyEditor/package.manifest
-	
-	Add a prefix if you like, e.g. folderPrefix="/App_Plugins/Company.":
-	
-		/App_Plugins/Company.MyPropertyEditor/package.manifest
-	-->
-	<files folderPrefix="/App_Plugins/'">
-		<file ref="package.manifest" />
-		<file ref="editor-styles.css" />
-		<file ref="editor-view.html" />
-		<file ref="editor-controller.js" />
+	<files>
+		<file ref="package.manifest" versioned="no" />
+		<file ref="&fileBaseName;.controller.js" />
+		<file ref="&fileBaseName;.styles.css" />
+		<file ref="&fileBaseName;.editor.html" />
+		<language ref="da-DK.xml" />
+		<language ref="en-US.xml" />
+		<language ref="en-GB.xml" />
 	</files>
 	<info>
 		<package>
@@ -24,7 +19,7 @@
 			<version>&packageVersion;</version>
 			<iconUrl />
 			<license url="http://opensource.org/licenses/MIT">MIT License</license>
-			<url>https://our.umbraco.com/packages/</url>
+			<url>&packageURL;</url>
 			<requirements type="strict">
 				<major>7</major>
 				<minor>0</minor>
@@ -33,9 +28,9 @@
 		</package>
 		<author>
 			<name>&packageAuthor;</name>
-			<website>https://our.umbraco.com/</website>
+			<website>&packageAuthorURL;</website>
 		</author>
-		<readme><![CDATA[]]></readme>
+		<readme>&packageREADME;</readme>
 	</info>
 	<DocumentTypes />
 	<Templates />

@@ -1,3 +1,9 @@
-<!ENTITY packageName "My Property Editor">
-<!ENTITY packageVersion "0.5">
-<!ENTITY packageAuthor "Your Name">
+<!ENTITY packageVersion "1.0.0">
+<!ENTITY packageName "Vokseværk EDITOR_NAME Editor">
+<!ENTITY propertyEditorName "EDITOR_NAME Editor">
+<!ENTITY fileBaseName "propeditor">
+<!ENTITY packageAlias "Vokseverk.EDITOR_ALIAS">
+<!ENTITY packageAuthor "Vokseværk">
+<!ENTITY packageAuthorURL "https://vokseverk.dk/">
+<!ENTITY packageURL "TODO">
+<!ENTITY packageREADME "TODO">
