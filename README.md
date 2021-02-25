@@ -1,6 +1,6 @@
 # Umbraco Property Editor Template
 
-This is my starter project for an Umbraco Property Editor.
+This is our starter project for an Umbraco Property Editor.
 
 ## Process
 
@@ -20,12 +20,22 @@ default "package-template" to something that suits your project
 
 - Edit this README to describe your new property editor :)
 
-
-## Building
-
-Running the `build.sh` script builds a ZIP file in the `dist` folder which
-should be installable from Umbraco 8's _Packages_ section or
-Umbraco 7's _Developer > Packages_ section.
+- Create an entry for your new package on [Our Umbraco][OURPKG]
 
 
+## Developing & Building
+
+On macOS you can run the `build.sh` script from the terminal, which will
+build a ZIP file in the `dist` folder that is installable from
+Umbraco 8's _Packages_ section or Umbraco 7's _Developer > Packages_ section.
+
+The build script versions the files so it's easier to test the package inside
+an Umbraco installation by uninstalling the existing version and then
+installing a new build. Existing data-types keep their data as long as their
+alias and/or storage type isn't changed.
+
+To update the version number, increment the `packageVersion` entity in the
+`src/package.ent` file.
+
+[OURPKG]: https://our.umbraco.com/member/profile/packages/
  
