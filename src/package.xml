@@ -8,7 +8,7 @@
 		<file ref="package.manifest" versioned="no" />
 		<file ref="&fileBaseName;.controller.js" />
 		<file ref="&fileBaseName;.styles.css" />
-		<file ref="&fileBaseName;.editor.html" />
+		<file ref="&fileBaseName;.view.html" />
 		<language ref="da-DK.xml" />
 		<language ref="en-US.xml" />
 		<language ref="en-GB.xml" />
