@@ -5,10 +5,15 @@
 ]>
 <umbPackage>
 	<files>
+		<!-- The manifest file should not be versioned -->
 		<file ref="package.manifest" versioned="no" />
+		
+		<!-- The main files -->
 		<file ref="&fileBaseName;.controller.js" />
 		<file ref="&fileBaseName;.styles.css" />
 		<file ref="&fileBaseName;.view.html" />
+		
+		<!-- Language files for translation -->
 		<language ref="da-DK.xml" />
 		<language ref="en-US.xml" />
 		<language ref="en-GB.xml" />
