@@ -1,5 +1,7 @@
-PKG_NAME=`grep -o ' packageAlias \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
 VERSION=`grep -o ' packageVersion \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
+NAMESPACE=`grep -o ' orgNamespace \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
+PACKAGE=`grep -o ' propertyEditorName \"\(.*\)\"' src/package.ent | awk '{print $2}' | sed 's/"//g'`
+PKG_NAME="${NAMESPACE}.${PACKAGE}"
 
 # Create the dist directory if needed
 if [[ ! -d dist ]]
