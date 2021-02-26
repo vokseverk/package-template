@@ -4,23 +4,24 @@ This is our starter project for an Umbraco Property Editor.
 
 ## Process
 
-- After creating a new project from this template, rename the root folder from the
-default "package-template" to something that suits your project
+Click the **Use this template** button to create a new copy of this repository
+in your own account. Then clone that new repository down to your local machine
+and get started:
 
-- Then find the `src/package.ent` file and change the constants in there
+- [ ] Find the `src/package.ent` file and change the constants in there
 
-- You may want to change a few things in the `package.xml` and `manifest.xml` files as well
+- [ ] You may want to change a few things in the `package.xml` and `manifest.xml` files as well
 
-- Look for `TODO`, `EDITOR_NAME` and `EDITOR_ALIAS` in various files and change accordingly
+- [ ] Look for `TODO`, `EDITOR_NAME` and `EDITOR_ALIAS` in various files and change accordingly
 
-- Edit/add/remove files in the `src/` folder and update the files section in the
+- [ ] Edit/add/remove files in the `src/` folder and update the files section in the
 `package.xml` file
 
-- Edit the `PropertyConverterV(7|8).cs` files as well
+- [ ] Edit the `PropertyConverterV(7|8).cs` files as well
 
-- Edit this README to describe your new property editor :)
+- [ ] Edit this README to describe your new property editor :)
 
-- Create an entry for your new package on [Our Umbraco][OURPKG]
+- [ ] Create an entry for your new package on [Our Umbraco][OURPKG]
 
 
 ## Developing & Building
