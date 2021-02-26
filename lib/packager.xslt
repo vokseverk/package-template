@@ -12,6 +12,8 @@
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:str="http://exslt.org/strings"
+	exclude-result-prefixes="str"
 >
 
 	<xsl:output method="xml"
@@ -50,9 +52,13 @@
 		<file>
 			<guid><xsl:value-of select="@ref" /></guid>
 			<orgPath>
-				<xsl:apply-templates select="@ref" mode="versioned" />
+				<xsl:value-of select="concat('/App_Plugins/', $packageAlias)" />
 			</orgPath>
-			<orgName><xsl:value-of select="@ref" /></orgName>
+			<orgName>
+				<!-- These are mutually exclusive: -->
+				<xsl:apply-templates select="@ref[../@versioned = 'no']" />
+				<xsl:apply-templates select="@ref[not(../@versioned = 'no')]" mode="versioned" />
+			</orgName>
 		</file>
 	</xsl:template>
 
@@ -66,9 +72,17 @@
 		</file>
 	</xsl:template>
 	
-	<xsl:template match="@*" mode="versioned">
-		<xsl:value-of select="concat('/App_Plugins/', $packageAlias, '/')" />
-		<xsl:if test="not(../@versioned = 'no')"><xsl:value-of select="$version" /></xsl:if>
+	<xsl:template match="@ref" mode="versioned">
+		<xsl:variable name="parts" select="str:split(., '.')" />
+		<xsl:for-each select="$parts">
+			<xsl:if test="not(position() = 1) and not(position() = last())">.</xsl:if>
+			<xsl:if test="not(position() = last())">
+				<xsl:value-of select="." />
+			</xsl:if>
+			<xsl:if test="position() = last()">
+				<xsl:value-of select="concat('-', $version, '.', .)" />
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
 
 </xsl:stylesheet>

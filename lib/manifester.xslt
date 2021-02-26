@@ -11,6 +11,8 @@
 <xsl:stylesheet
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:str="http://exslt.org/strings"
+	exclude-result-prefixes="str"
 >
 	<xsl:output method="text"
 		indent="yes"
@@ -128,7 +130,17 @@
 	
 	<xsl:template match="*" mode="versioned">
 		<xsl:variable name="pluginpath" select="concat('~/App_Plugins/', $packageAlias, '/')" />
-		<xsl:value-of select="concat($pluginpath, $version, '/', .)" />
+		<xsl:variable name="parts" select="str:split(., '.')" />
+		<xsl:value-of select="$pluginpath" />
+		<xsl:for-each select="$parts">
+			<xsl:if test="not(position() = 1) and not(position() = last())">.</xsl:if>
+			<xsl:if test="not(position() = last())">
+				<xsl:value-of select="." />
+			</xsl:if>
+			<xsl:if test="position() = last()">
+				<xsl:value-of select="concat('-', $version, '.', .)" />
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
-	
+
 </xsl:stylesheet>
