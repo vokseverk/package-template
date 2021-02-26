@@ -1,7 +1,7 @@
 <!ENTITY packageVersion "1.0.0">
 
-<!ENTITY orgDisplayName "Vokseværk">
-<!ENTITY orgNamespace "dk.vokseverk">
+<!ENTITY orgDisplayName "ORGANISATION">
+<!ENTITY orgNamespace "organisation">
 
 <!ENTITY propertyEditorName "DISPLAY_NAME">
 <!ENTITY propertyEditorAlias "EDITOR_ALIAS">
