@@ -36,9 +36,8 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<xsl:template match="comment() | processing-instruction()">
-		<xsl:copy-of select="." />
-	</xsl:template>
+	<!-- No output for these -->
+	<xsl:template match="comment() | processing-instruction()" />
 	
 	<!-- The `<files>` element has a `@folderPrefix` attribute we don't want to copy -->
 	<xsl:template match="files">
