@@ -14,7 +14,7 @@ namespace Vokseverk {
 		
 		public override bool IsConverter(PublishedPropertyType propertyType) {
 			// TODO: Change alias
-			return propertyType.PropertyEditorAlias.Equals("EDITOR_ALIAS");
+			return propertyType.PropertyEditorAlias.Equals("ORGANISATION_ALIAS.EDITOR_ALIAS");
 		}
 		
 		public override object ConvertDataToSource(PublishedPropertyType propertyType, object data, bool preview) {

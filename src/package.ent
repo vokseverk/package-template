@@ -1,7 +1,7 @@
 <!ENTITY packageVersion "1.0.0">
 
-<!ENTITY orgDisplayName "ORGANISATION">
-<!ENTITY orgNamespace "organisation">
+<!ENTITY orgDisplayName "ORGANISATION_NAME">
+<!ENTITY orgNamespace "ORGANISATION_ALIAS">
 
 <!ENTITY propertyEditorName "DISPLAY_NAME">
 <!ENTITY propertyEditorAlias "EDITOR_ALIAS">
@@ -12,6 +12,7 @@
 
 <!ENTITY fileBaseName "propeditor">
 
-<!ENTITY packageAuthorURL "https://vokseverk.dk/">
+<!ENTITY packageAuthorURL "ORGANISATION_URL">
+<!ENTITY packageIconURL "TODO">
 <!ENTITY packageURL "TODO">
 <!ENTITY packageREADME "TODO">
