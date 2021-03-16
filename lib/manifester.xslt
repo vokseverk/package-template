@@ -110,7 +110,7 @@
 		<xsl:apply-templates select="text()" mode="quoted" />
 	</xsl:template>
 	
-	<xsl:template match="*[@type = 'int']" mode="json" priority="-1">
+	<xsl:template match="*[@type = 'int'] | *[@type = 'bool']" mode="json" priority="-1">
 		<xsl:value-of select="name()" />
 		<xsl:text>: </xsl:text>
 		<xsl:value-of select="." />
