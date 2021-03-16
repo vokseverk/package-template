@@ -27,7 +27,7 @@
 		<!--
 		TODO: Need defaultConfig?
 		<defaultConfig>
-			<rating>5</rating>
+			<rating type="int | bool">5</rating>
 		</defaultConfig>
 		-->
 	</propertyEditor>
