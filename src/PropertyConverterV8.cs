@@ -9,8 +9,8 @@ using Umbraco.Core.Models.PublishedContent;
 
 namespace Vokseverk {
 	
-	public class KeyValuePropertyConverter : IPropertyValueConverter {
-		// TODO: Change class name above
+	// TODO: Change class name here
+	public class EDITOR_ALIASPropertyConverter : IPropertyValueConverter {
 		
 		public bool IsConverter(IPublishedPropertyType propertyType) {
 			// TODO: Change alias here
