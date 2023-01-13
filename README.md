@@ -1,6 +1,8 @@
 # Umbraco Property Editor Template
 
-This is our starter project for an Umbraco Property Editor.
+<img align="right" src="images/vv-blueprint-icon.png" width="180" height="180" alt="The Vokseværk ‘fire-heart’ logo in light blue on a blueprint-style blue background with vertical, horizontal, diagonal and circular grid-lines" />
+
+This is our Blueprint Project for an Umbraco Property Editor.
 
 ## Process
 
@@ -39,4 +41,4 @@ To update the version number, increment the `packageVersion` entity in the
 `src/package.ent` file.
 
 [OURPKG]: https://our.umbraco.com/member/profile/packages/
- 
+
