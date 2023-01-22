@@ -1,18 +1,50 @@
+<!-- Legacy version for v7 and v8 package(s) -->
 <!ENTITY packageVersion "1.0.0">
 
-<!ENTITY orgDisplayName "ORGANISATION_NAME">
-<!ENTITY orgNamespace "ORGANISATION_ALIAS">
+<!-- Versions for specific Umbraco versions -->
+<!ENTITY packageVersionV9 "2.0.0">
+<!ENTITY packageVersionV10 "3.0.0">
+<!ENTITY packageVersionV11 "4.0.0">
 
-<!ENTITY propertyEditorName "DISPLAY_NAME">
-<!ENTITY propertyEditorAlias "EDITOR_ALIAS">
+<!-- Namespace for the Nuget package -->
+<!ENTITY packageNamespace "Vokseverk">
 
-<!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
-<!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">
-<!ENTITY packageAuthor "&orgDisplayName;">
+<!-- Name of package -->
+<!ENTITY packageDisplayName "Color Selector">
 
-<!ENTITY fileBaseName "propeditor">
+<!-- Name of package in a safe for URLs etc. notation -->
+<!ENTITY packageSafeName "ColorSelector">
 
-<!ENTITY packageAuthorURL "ORGANISATION_URL">
-<!ENTITY packageIconURL "TODO">
+<!-- === Don't build this from entities! === -->
+<!ENTITY packageAlias "Vokseverk.ColorSelector">
+<!-- ======================================= -->
+
+<!-- Name of author (or organisation) -->
+<!ENTITY packageAuthor "Vokseværk">
+
+<!-- The full name of the package -->
+<!ENTITY packageName "&packageAuthor; &packageDisplayName;">
+
+<!-- URL for more info on author -->
+<!ENTITY packageAuthorURL "https://vokseverk.dk/">
+
+<!-- The icon's filename (should be inside the `images` folder) -->
+<!ENTITY packageIconFile "vv-colorselector-icon.png">
+
+
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/&packageAlias;/main/images/&packageIconFile;">
+
+<!-- URL for the package website, if any -->
 <!ENTITY packageURL "TODO">
+
+<!-- The README content for the Umbraco package -->
 <!ENTITY packageREADME "TODO">
+
+<!-- Repository URL -->
+<!ENTITY packageRepoURL "https://github.com/vokseverk/&packageAlias;">
+
+<!-- Tags to add to the Nuget package -->
+<!ENTITY packageTags "umbraco colorpicker colorselector property-editor umbraco-marketplace">
+
+<!-- Description for the Nuget package -->
+<!ENTITY packageDESC "An Umbraco Property Editor for selecting a color - either by picking from a few defaults or by providing a specific CSS color value.">
